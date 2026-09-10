@@ -1,41 +1,41 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Building2, Zap, Trash2, Hammer } from 'lucide-react'
-import { services } from '../data'
 
-const icons: Record<string, React.ReactNode> = {
-  'structural-maintenance': <Building2 className="w-7 h-7" />,
-  thermography: <Zap className="w-7 h-7" />,
-  demolition: <Trash2 className="w-7 h-7" />,
-  'commercial-cabinetry': <Hammer className="w-7 h-7" />,
-}
+const services = [
+  { title: 'Commercial Structural Maintenance', image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80' },
+  { title: 'Thermography Report (FLIR scanning)', image: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80' },
+  { title: 'Demolition, disposal, pressure washing', image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80' },
+  { title: 'Commercial Cabinetry for front desks, offices etc.', image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80' },
+]
 
 export function ServiceCards() {
   return (
     <section className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
-          <div>
-            <span className="inline-block px-3 py-1 rounded-full bg-brand-light text-brand text-xs font-semibold uppercase tracking-wider mb-4">What We Do</span>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-white">Our Services</h2>
-          </div>
-          <Link to="/services" className="mt-4 lg:mt-0 inline-flex items-center gap-2 text-brand text-sm font-semibold hover:underline">
-            View All Services <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <h2 className="font-heading text-4xl lg:text-5xl font-bold text-[#1D0E03] mb-10">Services</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((s) => (
-            <Link key={s.id} to={`/services/${s.slug}`} className="group block p-6 lg:p-8 rounded-xl bg-zinc-950 border border-border hover:border-brand/40 transition-all duration-300 hover:shadow-lg hover:shadow-brand/5">
-              <div className="w-14 h-14 rounded-xl bg-brand-light border border-brand/20 flex items-center justify-center text-brand mb-5 group-hover:bg-brand/20 group-hover:scale-105 transition-all duration-300">
-                {icons[s.id] || <Building2 className="w-7 h-7" />}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand transition-colors">{s.title}</h3>
-              <p className="text-sm text-dim leading-relaxed mb-5">{s.desc}</p>
-              <div className="flex items-center gap-2 text-brand text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Learn More <ArrowRight className="w-4 h-4" />
-              </div>
-            </Link>
-          ))}
+        <div className="bg-[#F98B0F] rounded-2xl p-6 sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s, i) => (
+              <Link key={i} to="/services" className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-heading text-base lg:text-lg font-semibold text-[#1D0E03] leading-snug">{s.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="font-body text-sm text-[#1D0E03]">
+              The services you're looking for as not listed here? Chances are, we do it too!
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -1,16 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --color-brand: #c8411e;
-  --color-brand-hover: #a83518;
-  --color-brand-light: rgba(200, 65, 30, 0.12);
-  --color-surface: #111318;
-  --color-surface-alt: #181b22;
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-border-hover: rgba(255, 255, 255, 0.14);
-  --color-dim: #9ca3af;
-  --color-muted: #6b7280;
+  --font-heading: 'Assistant', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Questrial', ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #CA5502;
+  --color-brand-hover: #A84502;
+  --color-brand-light: rgba(202, 85, 2, 0.10);
+  --color-accent: #014B3F;
+  --color-accent-hover: #013A31;
+  --color-bg: #FFF6EF;
+  --color-bg-alt: #F5EDE4;
+  --color-card: #FFFFFF;
+  --color-text: #1D0E03;
+  --color-text-secondary: #56483E;
+  --color-muted: #8E8279;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.15);
+  --color-orange-overlay: #F98B0F;
 }
 
 *,
@@ -34,7 +40,13 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 ::selection {
