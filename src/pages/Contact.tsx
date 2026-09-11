@@ -38,29 +38,29 @@ export function Contact() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-12">
-            <div className="space-y-6">
+            <div className="space-y-5">
               <h2 className="font-heading text-2xl font-extrabold text-[#1D0E03] mb-6">Get in Touch</h2>
 
               <a href={`mailto:${company.email}`} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-[#00000008] hover:border-[#CA5502]/30 transition-colors group shadow-sm">
-                <div className="w-10 h-10 rounded-lg bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0 group-hover:bg-[#CA5502]/20 transition-colors"><Mail className="w-5 h-5" /></div>
-                <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Email</h3><p className="text-sm text-[#CA5502]">{company.email}</p></div>
+                <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0 group-hover:bg-[#CA5502]/20 transition-colors"><Mail className="w-5 h-5" /></div>
+                <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Email</h3><p className="text-sm text-[#CA5502] font-medium">{company.email}</p></div>
               </a>
 
               <div className="p-5 rounded-xl bg-white border border-[#00000008] shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><MapPin className="w-5 h-5" /></div>
+                  <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><MapPin className="w-5 h-5" /></div>
                   <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Location</h3><p className="text-sm text-[#56483E]">{company.address}</p></div>
                 </div>
               </div>
 
               <div className="p-5 rounded-xl bg-white border border-[#00000008] shadow-sm">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><Clock className="w-5 h-5" /></div>
+                  <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><Clock className="w-5 h-5" /></div>
                   <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Office Hours</h3><p className="text-sm text-[#56483E]">{company.hours}</p><p className="text-sm text-[#56483E]">Closed weekends</p></div>
                 </div>
               </div>
 
-              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20">Request a Quote</Link>
+              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20 text-sm">Request a Quote</Link>
             </div>
 
             <div className="lg:col-span-2">
@@ -107,7 +107,7 @@ export function Contact() {
                         className={`w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors resize-none ${errs.message ? 'border-red-500' : 'border-[#00000012]'}`} placeholder="Tell us about your project..." />
                       {errs.message && <p className="mt-1 text-xs text-red-500">{errs.message}</p>}
                     </div>
-                    <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20">
+                    <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20 text-sm">
                       <Send className="w-4 h-4" /> Send Message
                     </button>
                   </form>

@@ -21,14 +21,14 @@ export function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-md' : 'bg-[#FFF6EF]'}`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-xl shadow-md' : 'bg-[#FFF6EF]/95 backdrop-blur-sm'}`}
       role="navigation"
       aria-label="Main"
     >
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-16 lg:h-[4.5rem]">
           <Link to="/" className="flex items-center gap-3 group" aria-label="Home">
-            <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-lg bg-[#CA5502] flex items-center justify-center transition-transform group-hover:scale-105">
+            <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-[#CA5502] flex items-center justify-center transition-transform group-hover:scale-105 shadow-sm shadow-[#CA5502]/20">
               <Wrench className="w-5 h-5 text-white" strokeWidth={2.5} />
             </div>
             <div className="flex flex-col">
@@ -37,7 +37,7 @@ export function Navbar() {
             </div>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-0.5">
             {nav.map((item) => {
               const active = loc.pathname === item.href || (item.href !== '/' && loc.pathname.startsWith(item.href))
               return (
@@ -56,7 +56,7 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-3 lg:hidden">
-            <Link to="/quote" className="px-4 py-2 bg-[#CA5502] text-white text-xs font-heading font-semibold rounded-lg">Quote</Link>
+            <Link to="/quote" className="px-4 py-2 bg-[#CA5502] text-white text-xs font-heading font-semibold rounded-lg shadow-sm shadow-[#CA5502]/20">Quote</Link>
             <button onClick={() => setOpen(!open)} className="p-2 rounded-lg text-[#56483E] hover:text-[#1D0E03] hover:bg-black/5 transition-colors" aria-expanded={open} aria-label={open ? 'Close menu' : 'Open menu'}>
               {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -66,7 +66,7 @@ export function Navbar() {
 
       {open && (
         <div className="lg:hidden border-t border-[#00000010] bg-white shadow-lg">
-          <div className="px-4 py-6 space-y-1">
+          <div className="px-5 py-6 space-y-1">
             {nav.map((item) => {
               const active = loc.pathname === item.href
               return (
@@ -77,7 +77,7 @@ export function Navbar() {
               )
             })}
             <div className="pt-4">
-              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg">Request a Quote</Link>
+              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg shadow-md shadow-[#CA5502]/20">Request a Quote</Link>
             </div>
           </div>
         </div>
