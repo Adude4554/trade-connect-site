@@ -13,8 +13,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/25 to-black/55" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full py-16">
-        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl max-w-[56rem] overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:px-20 w-full py-16">
+        <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl max-w-4xl overflow-hidden">
           <div className="grid lg:grid-cols-2">
             <div className="p-7 sm:p-10 lg:p-14 flex flex-col justify-center border-l-4 border-[#CA5502]">
               <h1 className="font-heading text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-[#1D0E03] leading-[1.15] tracking-tight mb-5">
