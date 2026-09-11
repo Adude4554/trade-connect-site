@@ -25,7 +25,7 @@ export function Navbar() {
       role="navigation"
       aria-label="Main"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link to="/" className="flex items-center gap-3 group" aria-label="Home">
             <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-lg bg-[#CA5502] flex items-center justify-center transition-transform group-hover:scale-105">

@@ -8,7 +8,7 @@ export function Projects() {
       <HeroSmall title="Our Work" desc="Showcasing our commercial maintenance, renovation, demolition and construction projects across Eastern Ontario." />
 
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="mb-8 p-4 rounded-xl bg-[#F98B0F]/10 border border-[#F98B0F]/20">
             <p className="text-sm text-[#A84502]"><strong>Note:</strong> The projects below are demo placeholders. Replace with actual project photos and details when available.</p>
           </div>

@@ -10,22 +10,22 @@ const services = [
 export function ServiceCards() {
   return (
     <section className="py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="font-heading text-4xl lg:text-5xl font-bold text-[#1D0E03] mb-10">Services</h2>
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1D0E03] mb-10">Services</h2>
 
-        <div className="bg-[#F98B0F] rounded-2xl p-6 sm:p-8 lg:p-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-[#F98B0F] rounded-2xl p-5 sm:p-8 lg:p-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {services.map((s, i) => (
               <Link key={i} to="/services" className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="aspect-[4/5] overflow-hidden">
+                <div className="aspect-[3/2] overflow-hidden">
                   <img
                     src={s.image}
                     alt={s.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="font-heading text-base lg:text-lg font-semibold text-[#1D0E03] leading-snug">{s.title}</h3>
+                <div className="p-4 sm:p-5">
+                  <h3 className="font-heading text-sm sm:text-base font-semibold text-[#1D0E03] leading-snug">{s.title}</h3>
                 </div>
               </Link>
             ))}
@@ -33,7 +33,7 @@ export function ServiceCards() {
 
           <div className="mt-8 text-center">
             <p className="font-body text-sm text-[#1D0E03]">
-              The services you're looking for as not listed here? Chances are, we do it too!
+              The services you're looking for are not listed here? Chances are, we do it too!
             </p>
           </div>
         </div>

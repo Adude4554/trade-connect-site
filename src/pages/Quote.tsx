@@ -51,7 +51,7 @@ export function Quote() {
       <div className="min-h-screen">
         <HeroSmall title="Request a Quote" desc="Tell us about your project and we'll provide a detailed response." />
         <section className="py-16 lg:py-24">
-          <div className="max-w-2xl mx-auto px-4 text-center">
+          <div className="max-w-2xl mx-auto px-5 sm:px-8 text-center">
             <div className="p-12 rounded-xl bg-white border border-[#00000008] shadow-sm">
               <CheckCircle className="w-20 h-20 text-green-500 mx-auto mb-6" />
               <h2 className="font-heading text-2xl font-bold text-[#1D0E03] mb-3">Quote Request Received</h2>
@@ -75,7 +75,7 @@ export function Quote() {
       <HeroSmall title="Request a Quote" desc="Tell us about your project. We'll review your requirements and respond promptly." />
 
       <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <form onSubmit={submit} className="space-y-8">

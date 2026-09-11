@@ -8,7 +8,7 @@ export function About() {
       <HeroSmall title="About Trade Connect" desc="A commercial contracting company built on teamwork, integrity, respect, honesty and excellence." />
 
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="font-heading text-2xl lg:text-3xl font-extrabold text-[#1D0E03] mb-6">Who We Are</h2>
@@ -45,7 +45,7 @@ export function About() {
       </section>
 
       <section className="py-16 bg-[#F5EDE4]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="text-center mb-12">
             <h2 className="font-heading text-2xl lg:text-3xl font-extrabold text-[#1D0E03] mb-4">Our Values</h2>
           </div>
@@ -67,7 +67,7 @@ export function About() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="font-heading text-2xl lg:text-3xl font-extrabold text-[#1D0E03] mb-4">Let's Work Together</h2>
           <p className="text-[#56483E] text-lg mb-8">Ready to discuss your commercial project? Contact us today.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

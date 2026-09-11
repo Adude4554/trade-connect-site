@@ -12,7 +12,7 @@ export function Areas() {
       <HeroSmall title="Service Areas" desc="Proudly serving commercial clients throughout Eastern Ontario from our base in Alfred." />
 
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="font-heading text-2xl font-extrabold text-[#1D0E03] mb-6">Where We Work</h2>

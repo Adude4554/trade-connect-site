@@ -5,7 +5,7 @@ export function HeroSmall({ title, desc, crumbs }: { title: string; desc?: strin
   return (
     <section className="relative py-16 lg:py-24 bg-[#F5EDE4] overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(202,85,2,0.06)_0%,transparent_60%)]" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {crumbs && crumbs.length > 0 && (
           <nav className="flex items-center gap-2 text-sm text-[#8E8279] mb-6" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#CA5502] transition-colors">Home</Link>
@@ -18,7 +18,7 @@ export function HeroSmall({ title, desc, crumbs }: { title: string; desc?: strin
           </nav>
         )}
         <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1D0E03] mb-4">{title}</h1>
-        {desc && <p className="text-lg text-[#56483E] max-w-2xl leading-relaxed">{desc}</p>}
+        {desc && <p className="text-base sm:text-lg text-[#56483E] max-w-2xl leading-relaxed">{desc}</p>}
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#CA5502]/20 to-transparent" />
     </section>

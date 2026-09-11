@@ -10,7 +10,7 @@ const items = [
 export function Trust() {
   return (
     <section className="py-16 lg:py-20 bg-[#F5EDE4]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item, i) => (
             <div key={i} className="group p-6 rounded-xl bg-white border border-[#00000008] hover:border-[#CA5502]/30 transition-all duration-300 shadow-sm">

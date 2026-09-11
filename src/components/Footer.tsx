@@ -25,7 +25,7 @@ export function Footer() {
       </div>
 
       <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             <div>
               <Link to="/" className="flex items-center gap-3 mb-5">
@@ -80,9 +80,9 @@ export function Footer() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
               <div>
                 <h4 className="font-heading text-sm font-bold text-white uppercase tracking-widest mb-4">Get in Touch</h4>
-                <p className="text-sm text-white/70 mb-2">Email: <a href={`mailto:${company.email}`} className="text-[#CA5502] hover:underline">{company.email}</a></p>
-                <p className="text-sm text-white/70 mb-2">{company.hours}</p>
-                <p className="text-sm text-white/70">{company.address}</p>
+                <p className="text-sm text-white/80 mb-2">Email: <a href={`mailto:${company.email}`} className="text-[#CA5502] hover:underline font-medium">{company.email}</a></p>
+                <p className="text-sm text-white/80 mb-2">{company.hours}</p>
+                <p className="text-sm text-white/80">{company.address}</p>
               </div>
 
               <div>
@@ -138,7 +138,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           </div>
         </div>

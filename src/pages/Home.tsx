@@ -14,7 +14,7 @@ export function Home() {
       <Process />
 
       <section className="py-16 lg:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block px-3 py-1 rounded-full bg-[#CA5502]/10 text-[#CA5502] text-xs font-heading font-semibold uppercase tracking-wider mb-4">Why Trade Connect</span>
@@ -51,7 +51,7 @@ export function Home() {
       </section>
 
       <section className="py-16 lg:py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="font-heading text-3xl lg:text-4xl font-extrabold text-[#1D0E03] mb-4">Ready to Start Your Project?</h2>
           <p className="text-[#56483E] text-lg mb-8 max-w-2xl mx-auto">Contact us today for a consultation. We'll discuss your requirements and provide a detailed plan.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -13,7 +13,7 @@ export function ServiceDetail() {
       <HeroSmall title={svc.title} desc={svc.desc} crumbs={[{ label: 'Services', href: '/services' }, { label: svc.title }]} />
 
       <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <h2 className="font-heading text-2xl font-bold text-[#1D0E03] mb-6">Overview</h2>
@@ -68,7 +68,7 @@ export function ServiceDetail() {
       </section>
 
       <section className="py-16 bg-[#F5EDE4]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12 text-center">
           <h2 className="font-heading text-2xl lg:text-3xl font-bold text-[#1D0E03] mb-4">Need This Service?</h2>
           <p className="text-[#56483E] mb-6">Contact us to discuss your requirements and get a detailed quote.</p>
           <Link to="/quote" className="inline-flex items-center gap-2 px-6 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20">

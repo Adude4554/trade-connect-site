@@ -3,7 +3,7 @@ import { processSteps } from '../data'
 export function Process() {
   return (
     <section className="py-16 lg:py-24 bg-[#FFF6EF]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="text-center mb-12 lg:mb-16">
           <span className="inline-block px-3 py-1 rounded-full bg-[#CA5502]/10 text-[#CA5502] text-xs font-heading font-semibold uppercase tracking-wider mb-4">Our Process</span>
           <h2 className="font-heading text-3xl lg:text-4xl font-extrabold text-[#1D0E03]">How We Work</h2>
