@@ -13,7 +13,7 @@ import { NotFound } from './pages/NotFound'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#FFF6EF] text-[#1D0E03] font-body">
+    <div className="min-h-screen bg-[#FFF8F3] text-[#1A1A2E] font-body">
       <Navbar />
       <main>
         <Routes>

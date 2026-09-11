@@ -13,12 +13,12 @@ export function Trust() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((item, i) => (
-            <div key={i} className="group p-6 lg:p-7 rounded-xl bg-white border border-[#00000008] hover:border-[#CA5502]/30 transition-all duration-300 shadow-sm hover:shadow-md">
-              <div className="w-14 h-14 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] mb-5 group-hover:bg-[#CA5502]/15 transition-colors">
+            <div key={i} className={`group p-6 lg:p-7 rounded-xl bg-white border border-[#00000006] hover:border-[#CA5502]/30 transition-all duration-300 shadow-sm hover:shadow-lg card-hover animate-fade-in-up delay-${(i + 1) * 100}`}>
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#CA5502]/10 to-[#CA5502]/5 border border-[#CA5502]/15 flex items-center justify-center text-[#CA5502] mb-5 group-hover:bg-[#CA5502]/15 group-hover:scale-110 transition-all duration-300">
                 {item.icon}
               </div>
-              <h3 className="font-heading font-bold text-base text-[#1D0E03] mb-2">{item.title}</h3>
-              <p className="text-sm text-[#56483E] leading-relaxed">{item.text}</p>
+              <h3 className="font-heading font-bold text-base text-[#1A1A2E] mb-2">{item.title}</h3>
+              <p className="text-sm text-[#4A4A68] leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>

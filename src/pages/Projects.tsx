@@ -15,7 +15,7 @@ export function Projects() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {projects.map((p) => (
-                <div key={p.id} className="group rounded-xl bg-white border border-[#00000008] overflow-hidden hover:border-[#CA5502]/30 transition-all duration-300 shadow-sm hover:shadow-md">
+                <div key={p.id} className="group rounded-xl bg-white border border-[#00000006] overflow-hidden hover:border-[#CA5502]/30 transition-all duration-300 shadow-sm card-hover">
                   <div className="aspect-[16/10] bg-[#F5EDE4] relative overflow-hidden">
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <Building2 className="w-14 h-14 text-[#8E8279]/20 mb-3" />
@@ -30,9 +30,9 @@ export function Projects() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <h3 className="font-heading text-lg font-bold text-[#1D0E03] mb-2 group-hover:text-[#CA5502] transition-colors">{p.title}</h3>
+                    <h3 className="font-heading text-lg font-bold text-[#1A1A2E] mb-2 group-hover:text-[#CA5502] transition-colors">{p.title}</h3>
                     <div className="flex items-center gap-2 text-sm text-[#8E8279] mb-3"><MapPin className="w-3.5 h-3.5" />Eastern Ontario</div>
-                    <p className="text-sm text-[#56483E] leading-relaxed">{p.desc}</p>
+                    <p className="text-sm text-[#4A4A68] leading-relaxed">{p.desc}</p>
                   </div>
                 </div>
               )

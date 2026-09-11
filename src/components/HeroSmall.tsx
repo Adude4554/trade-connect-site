@@ -13,13 +13,13 @@ export function HeroSmall({ title, desc, crumbs }: { title: string; desc?: strin
             {crumbs.map((c, i) => (
               <span key={i} className="flex items-center gap-2">
                 <ChevronRight className="w-3 h-3" />
-                {c.href ? <Link to={c.href} className="hover:text-[#CA5502] transition-colors">{c.label}</Link> : <span className="text-[#56483E] font-medium">{c.label}</span>}
+                {c.href ? <Link to={c.href} className="hover:text-[#CA5502] transition-colors">{c.label}</Link> : <span className="text-[#4A4A68] font-medium">{c.label}</span>}
               </span>
             ))}
           </nav>
         )}
-        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1D0E03] mb-4 leading-tight">{title}</h1>
-        {desc && <p className="text-base sm:text-lg text-[#56483E] max-w-2xl leading-relaxed">{desc}</p>}
+        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1A2E] mb-4 leading-tight animate-fade-in-up">{title}</h1>
+        {desc && <p className="text-base sm:text-lg text-[#4A4A68] max-w-2xl leading-relaxed animate-fade-in-up delay-100">{desc}</p>}
       </div>
     </section>
   )

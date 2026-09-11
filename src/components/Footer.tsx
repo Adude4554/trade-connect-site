@@ -21,7 +21,7 @@ export function Footer() {
           alt="City skyline"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-[#1A1A2E]/70 backdrop-blur-sm" />
       </div>
 
       <div className="relative z-10">
@@ -29,7 +29,7 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             <div>
               <Link to="/" className="flex items-center gap-3 mb-5">
-                <div className="w-10 h-10 rounded-lg bg-[#CA5502] flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-[#CA5502] flex items-center justify-center shadow-lg shadow-[#CA5502]/30">
                   <span className="font-heading font-bold text-white text-sm">TC</span>
                 </div>
                 <span className="font-heading font-bold text-lg text-white">Trade Connect</span>
@@ -38,7 +38,7 @@ export function Footer() {
                 Commercial maintenance, renovation, demolition, thermography and construction services for businesses across Eastern Ontario.
               </p>
               <div className="space-y-2.5">
-                <a href={`mailto:${company.email}`} className="flex items-center gap-2 text-sm text-white/70 hover:text-[#CA5502] transition-colors">
+                <a href={`mailto:${company.email}`} className="flex items-center gap-2 text-sm text-white/70 hover:text-[#F98B0F] transition-colors">
                   <Mail className="w-4 h-4 shrink-0" />{company.email}
                 </a>
                 <div className="flex items-center gap-2 text-sm text-white/70">
@@ -54,9 +54,9 @@ export function Footer() {
               <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider mb-5">Navigation</h4>
               <ul className="space-y-3">
                 {nav.map((item) => (
-                  <li key={item.href}><Link to={item.href} className="text-sm text-white/70 hover:text-[#CA5502] transition-colors">{item.label}</Link></li>
+                  <li key={item.href}><Link to={item.href} className="text-sm text-white/70 hover:text-[#F98B0F] transition-colors">{item.label}</Link></li>
                 ))}
-                <li><Link to="/quote" className="text-sm text-white/70 hover:text-[#CA5502] transition-colors">Request a Quote</Link></li>
+                <li><Link to="/quote" className="text-sm text-white/70 hover:text-[#F98B0F] transition-colors">Request a Quote</Link></li>
               </ul>
             </div>
 
@@ -64,7 +64,7 @@ export function Footer() {
               <h4 className="font-heading text-xs font-bold text-white uppercase tracking-wider mb-5">Services</h4>
               <ul className="space-y-3">
                 {services.map((s) => (
-                  <li key={s.id}><Link to={`/services/${s.slug}`} className="text-sm text-white/70 hover:text-[#CA5502] transition-colors">{s.title}</Link></li>
+                  <li key={s.id}><Link to={`/services/${s.slug}`} className="text-sm text-white/70 hover:text-[#F98B0F] transition-colors">{s.title}</Link></li>
                 ))}
               </ul>
             </div>
@@ -75,7 +75,7 @@ export function Footer() {
                 <div className="bg-white/10 rounded-xl p-6 text-center border border-white/10">
                   <p className="text-white font-heading font-semibold mb-2">Thanks for submitting!</p>
                   <p className="text-white/60 text-sm mb-3">We'll get back to you soon.</p>
-                  <button onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }) }} className="text-[#CA5502] text-sm font-heading font-semibold hover:underline">Send another</button>
+                  <button onClick={() => { setSubmitted(false); setForm({ name: '', email: '', message: '' }) }} className="text-[#F98B0F] text-sm font-heading font-semibold hover:underline">Send another</button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3">
@@ -83,7 +83,7 @@ export function Footer() {
                     type="text"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#CA5502] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#F98B0F] focus:border-transparent transition-all"
                     placeholder="Your name"
                     required
                   />
@@ -91,7 +91,7 @@ export function Footer() {
                     type="email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#CA5502] focus:border-transparent transition-colors"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#F98B0F] focus:border-transparent transition-all"
                     placeholder="Your email"
                     required
                   />
@@ -99,11 +99,11 @@ export function Footer() {
                     rows={3}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#CA5502] focus:border-transparent transition-colors resize-none"
+                    className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/15 text-white text-sm placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#F98B0F] focus:border-transparent transition-all resize-none"
                     placeholder="Your message"
                     required
                   />
-                  <button type="submit" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#CA5502] text-white text-sm font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors">
+                  <button type="submit" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#CA5502] text-white text-sm font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-all duration-300 btn-shine">
                     <Send className="w-3.5 h-3.5" /> Send
                   </button>
                 </form>
@@ -112,13 +112,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/15">
+        <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-xs text-white/50">&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+            <p className="text-xs text-white/40">&copy; {new Date().getFullYear()} {company.name}. All rights reserved.</p>
             <div className="flex items-center gap-4">
-              <Link to="/" className="text-xs text-white/50 hover:text-white/70 transition-colors">Home</Link>
-              <Link to="/about" className="text-xs text-white/50 hover:text-white/70 transition-colors">About</Link>
-              <Link to="/contact" className="text-xs text-white/50 hover:text-white/70 transition-colors">Contact</Link>
+              <Link to="/" className="text-xs text-white/40 hover:text-white/70 transition-colors">Home</Link>
+              <Link to="/about" className="text-xs text-white/40 hover:text-white/70 transition-colors">About</Link>
+              <Link to="/contact" className="text-xs text-white/40 hover:text-white/70 transition-colors">Contact</Link>
             </div>
           </div>
         </div>

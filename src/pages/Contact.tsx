@@ -39,75 +39,75 @@ export function Contact() {
         <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="space-y-5">
-              <h2 className="font-heading text-2xl font-extrabold text-[#1D0E03] mb-6">Get in Touch</h2>
+              <h2 className="font-heading text-2xl font-extrabold text-[#1A1A2E] mb-6">Get in Touch</h2>
 
-              <a href={`mailto:${company.email}`} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-[#00000008] hover:border-[#CA5502]/30 transition-colors group shadow-sm">
-                <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0 group-hover:bg-[#CA5502]/20 transition-colors"><Mail className="w-5 h-5" /></div>
-                <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Email</h3><p className="text-sm text-[#CA5502] font-medium">{company.email}</p></div>
+              <a href={`mailto:${company.email}`} className="flex items-start gap-4 p-5 rounded-xl bg-white border border-[#00000006] hover:border-[#CA5502]/30 transition-all duration-300 group shadow-sm card-hover">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#CA5502]/10 to-[#CA5502]/5 border border-[#CA5502]/15 flex items-center justify-center text-[#CA5502] shrink-0 group-hover:scale-110 transition-all duration-300"><Mail className="w-5 h-5" /></div>
+                <div><h3 className="text-sm font-heading font-bold text-[#1A1A2E] mb-1">Email</h3><p className="text-sm text-[#CA5502] font-medium">{company.email}</p></div>
               </a>
 
-              <div className="p-5 rounded-xl bg-white border border-[#00000008] shadow-sm">
+              <div className="p-5 rounded-xl bg-white border border-[#00000006] shadow-sm card-hover">
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><MapPin className="w-5 h-5" /></div>
-                  <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Location</h3><p className="text-sm text-[#56483E]">{company.address}</p></div>
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#CA5502]/10 to-[#CA5502]/5 border border-[#CA5502]/15 flex items-center justify-center text-[#CA5502] shrink-0"><MapPin className="w-5 h-5" /></div>
+                  <div><h3 className="text-sm font-heading font-bold text-[#1A1A2E] mb-1">Location</h3><p className="text-sm text-[#4A4A68]">{company.address}</p></div>
                 </div>
               </div>
 
-              <div className="p-5 rounded-xl bg-white border border-[#00000008] shadow-sm">
+              <div className="p-5 rounded-xl bg-white border border-[#00000006] shadow-sm card-hover">
                 <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-[#CA5502]/10 border border-[#CA5502]/20 flex items-center justify-center text-[#CA5502] shrink-0"><Clock className="w-5 h-5" /></div>
-                  <div><h3 className="text-sm font-heading font-bold text-[#1D0E03] mb-1">Office Hours</h3><p className="text-sm text-[#56483E]">{company.hours}</p><p className="text-sm text-[#56483E]">Closed weekends</p></div>
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#CA5502]/10 to-[#CA5502]/5 border border-[#CA5502]/15 flex items-center justify-center text-[#CA5502] shrink-0"><Clock className="w-5 h-5" /></div>
+                  <div><h3 className="text-sm font-heading font-bold text-[#1A1A2E] mb-1">Office Hours</h3><p className="text-sm text-[#4A4A68]">{company.hours}</p><p className="text-sm text-[#4A4A68]">Closed weekends</p></div>
                 </div>
               </div>
 
-              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20 text-sm">Request a Quote</Link>
+              <Link to="/quote" className="block w-full text-center px-5 py-3 bg-gradient-to-r from-[#CA5502] to-[#A84502] text-white font-heading font-semibold rounded-lg hover:shadow-lg hover:shadow-[#CA5502]/25 transition-all duration-300 shadow-md text-sm btn-shine">Request a Quote</Link>
             </div>
 
             <div className="lg:col-span-2">
-              <div className="p-6 lg:p-8 rounded-xl bg-white border border-[#00000008] shadow-sm">
-                <h2 className="font-heading text-xl font-bold text-[#1D0E03] mb-6">Send a Message</h2>
+              <div className="p-6 lg:p-8 rounded-xl bg-white border border-[#00000006] shadow-sm">
+                <h2 className="font-heading text-xl font-bold text-[#1A1A2E] mb-6">Send a Message</h2>
                 {done ? (
                   <div className="text-center py-12">
                     <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="font-heading text-xl font-bold text-[#1D0E03] mb-2">Message Sent</h3>
-                    <p className="text-[#56483E] mb-6">Thank you for contacting us. We'll respond promptly.</p>
+                    <h3 className="font-heading text-xl font-bold text-[#1A1A2E] mb-2">Message Sent</h3>
+                    <p className="text-[#4A4A68] mb-6">Thank you for contacting us. We'll respond promptly.</p>
                     <button onClick={() => { setDone(false); setForm({ name: '', email: '', phone: '', subject: '', message: '' }) }} className="text-[#CA5502] text-sm font-heading font-semibold hover:underline">Send another</button>
                   </div>
                 ) : (
                   <form onSubmit={submit} className="space-y-5">
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="c-name" className="block text-sm font-heading font-medium text-[#1D0E03] mb-2">Name <span className="text-[#CA5502]">*</span></label>
+                        <label htmlFor="c-name" className="block text-sm font-heading font-medium text-[#1A1A2E] mb-2">Name <span className="text-[#CA5502]">*</span></label>
                         <input id="c-name" value={form.name} onChange={(e) => set('name', e.target.value)}
-                          className={`w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors ${errs.name ? 'border-red-500' : 'border-[#00000012]'}`} placeholder="Your name" />
+                          className={`w-full px-4 py-3 rounded-lg bg-[#FFF8F3] border text-[#1A1A2E] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-all ${errs.name ? 'border-red-500' : 'border-[#00000008]'}`} placeholder="Your name" />
                         {errs.name && <p className="mt-1 text-xs text-red-500">{errs.name}</p>}
                       </div>
                       <div>
-                        <label htmlFor="c-email" className="block text-sm font-heading font-medium text-[#1D0E03] mb-2">Email <span className="text-[#CA5502]">*</span></label>
+                        <label htmlFor="c-email" className="block text-sm font-heading font-medium text-[#1A1A2E] mb-2">Email <span className="text-[#CA5502]">*</span></label>
                         <input id="c-email" type="email" value={form.email} onChange={(e) => set('email', e.target.value)}
-                          className={`w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors ${errs.email ? 'border-red-500' : 'border-[#00000012]'}`} placeholder="your@email.com" />
+                          className={`w-full px-4 py-3 rounded-lg bg-[#FFF8F3] border text-[#1A1A2E] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-all ${errs.email ? 'border-red-500' : 'border-[#00000008]'}`} placeholder="your@email.com" />
                         {errs.email && <p className="mt-1 text-xs text-red-500">{errs.email}</p>}
                       </div>
                     </div>
                     <div className="grid sm:grid-cols-2 gap-5">
                       <div>
-                        <label htmlFor="c-phone" className="block text-sm font-heading font-medium text-[#1D0E03] mb-2">Phone</label>
+                        <label htmlFor="c-phone" className="block text-sm font-heading font-medium text-[#1A1A2E] mb-2">Phone</label>
                         <input id="c-phone" type="tel" value={form.phone} onChange={(e) => set('phone', e.target.value)}
-                          className="w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border border-[#00000012] text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors" placeholder="(123) 456-7890" />
+                          className="w-full px-4 py-3 rounded-lg bg-[#FFF8F3] border border-[#00000008] text-[#1A1A2E] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-all" placeholder="(123) 456-7890" />
                       </div>
                       <div>
-                        <label htmlFor="c-subject" className="block text-sm font-heading font-medium text-[#1D0E03] mb-2">Subject</label>
+                        <label htmlFor="c-subject" className="block text-sm font-heading font-medium text-[#1A1A2E] mb-2">Subject</label>
                         <input id="c-subject" value={form.subject} onChange={(e) => set('subject', e.target.value)}
-                          className="w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border border-[#00000012] text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors" placeholder="How can we help?" />
+                          className="w-full px-4 py-3 rounded-lg bg-[#FFF8F3] border border-[#00000008] text-[#1A1A2E] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-all" placeholder="How can we help?" />
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="c-msg" className="block text-sm font-heading font-medium text-[#1D0E03] mb-2">Message <span className="text-[#CA5502]">*</span></label>
+                      <label htmlFor="c-msg" className="block text-sm font-heading font-medium text-[#1A1A2E] mb-2">Message <span className="text-[#CA5502]">*</span></label>
                       <textarea id="c-msg" rows={5} value={form.message} onChange={(e) => set('message', e.target.value)}
-                        className={`w-full px-4 py-3 rounded-lg bg-[#FFF6EF] border text-[#1D0E03] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-colors resize-none ${errs.message ? 'border-red-500' : 'border-[#00000012]'}`} placeholder="Tell us about your project..." />
+                        className={`w-full px-4 py-3 rounded-lg bg-[#FFF8F3] border text-[#1A1A2E] text-sm placeholder-[#8E8279] focus:outline-none focus:ring-2 focus:ring-[#CA5502]/50 focus:border-[#CA5502] transition-all resize-none ${errs.message ? 'border-red-500' : 'border-[#00000008]'}`} placeholder="Tell us about your project..." />
                       {errs.message && <p className="mt-1 text-xs text-red-500">{errs.message}</p>}
                     </div>
-                    <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#CA5502] text-white font-heading font-semibold rounded-lg hover:bg-[#A84502] transition-colors shadow-md shadow-[#CA5502]/20 text-sm">
+                    <button type="submit" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#CA5502] to-[#A84502] text-white font-heading font-semibold rounded-lg hover:shadow-lg hover:shadow-[#CA5502]/25 transition-all duration-300 shadow-md text-sm btn-shine">
                       <Send className="w-4 h-4" /> Send Message
                     </button>
                   </form>
